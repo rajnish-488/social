@@ -1,0 +1,63 @@
+Arguments: 
+  C:\Program Files (x86)\nodejs\node.exe C:\Users\hp\AppData\Roaming\npm\node_modules\@sanity\cli\vendor\yarn install --json --non-interactive --ignore-engines --network-timeout 60000 --registry https://registry.npmjs.org
+
+PATH: 
+  C:\Users\hp\Desktop\social\Backend\node_modules\.bin;C:\Users\hp\Desktop\social\node_modules\.bin;C:\Users\hp\Desktop\node_modules\.bin;C:\Users\hp\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Users\hp\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\hp\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.6;C:\Users\hp\AppData\Local\Programs\Python\Python39;C:\Users\hp\AppData\Local\Programs\Python\Python39\Scripts;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\MinGW\bin;C:\Program Files (x86)\nodejs\;C:\Program Files\Git\cmd;C:\GnuWin32\bin;C:\Dev-Cpp\bin;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\hp\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.9;C:\Users\hp\.dotnet\tools;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Users\hp\AppData\Roaming\npm;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.17.3
+
+Platform: 
+  win32 ia32
+
+Trace: 
+  Error: https://registry.npmjs.org/date-fns/-/date-fns-2.28.0.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\hp\AppData\Roaming\npm\node_modules\@sanity\cli\vendor\yarn:135945:19)
+      at Object.onceWrapper (events.js:481:28)
+      at ClientRequest.emit (events.js:375:28)
+      at TLSSocket.emitRequestTimeout (_http_client.js:790:9)
+      at Object.onceWrapper (events.js:481:28)
+      at TLSSocket.emit (events.js:387:35)
+      at TLSSocket.Socket._onTimeout (net.js:484:8)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7)
+
+npm manifest: 
+  {
+    "name": "shareimg",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "package.json",
+    "author": "Rajnish Singh <rajnishsingh1080@gmail.com>",
+    "license": "UNLICENSED",
+    "scripts": {
+      "start": "sanity start",
+      "build": "sanity build"
+    },
+    "keywords": [
+      "sanity"
+    ],
+    "dependencies": {
+      "@sanity/base": "^2.23.2",
+      "@sanity/core": "^2.23.2",
+      "@sanity/default-layout": "^2.23.2",
+      "@sanity/default-login": "^2.23.2",
+      "@sanity/desk-tool": "^2.23.2",
+      "@sanity/vision": "^2.23.2",
+      "prop-types": "^15.7",
+      "react": "^17.0",
+      "react-dom": "^17.0",
+      "styled-components": "^5.2.0"
+    },
+    "devDependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
