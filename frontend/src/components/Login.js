@@ -1,11 +1,29 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login'
 import { useNavigate } from 'react-router-dom';
-import { FcGoogle } from 'react-icons/fc'
+import { FcGoogle, FcNegativeDynamic } from 'react-icons/fc'
 import shareVideo from '../assets/share.mp4';
 import logo from '../assets/logo.png'
 
+import client from '../client';
+
 const Login = () => {
+   const naviagte = useNavigate();
+
+   const responseGoogle = (response) => {
+      console.log(response)
+      localStorage.setItem('user', JSON.stringify(response.profileObj))
+      const { name, googleId, imageUrl } = response.profileObj
+      const doc = {
+         _id: googleId,
+         _type: 'user',
+         userName: name,
+         image: imageUrl
+      }
+      client.createIfNotExists(doc).then(() => {
+         naviagte('/', { replace: true })
+      })
+   }
 
    return (
       <div className='flex justify-start items-center flex-col h-screen'>
@@ -25,7 +43,7 @@ const Login = () => {
                </div>
                <div className='shawod-2xl'>
                   <GoogleLogin
-                     clientId=''
+                     clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
                      render={(renderProps) => (
                         <button
                            type='button'
@@ -37,7 +55,7 @@ const Login = () => {
                            Sign in with Google
                         </button>
                      )}
-                     onSuccess={responceGoogle}
+                     onSuccess={responseGoogle}
                      onFailure={responseGoogle}
                      cookiePolicy='single_host_origin'
                   />
