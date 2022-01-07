@@ -1,11 +1,11 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login'
 import { useNavigate } from 'react-router-dom';
-import { FcGoogle, FcNegativeDynamic } from 'react-icons/fc'
+import { FcGoogle } from 'react-icons/fc'
 import shareVideo from '../assets/share.mp4';
 import logo from '../assets/logo.png'
 
-import client from '../client';
+import { client } from '../client';
 
 const Login = () => {
    const naviagte = useNavigate();
